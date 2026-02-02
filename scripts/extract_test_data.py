@@ -10,8 +10,8 @@ test_paths = {'alpha_15_13929_4048': 'data/Parm_PH_29/alpha_15/alpha_15_13929_40
               'AR_1_Ret_360': 'data/DUCT/AR_1_Ret_360',
               'AR_3_Ret_360': 'data/DUCT/AR_3_Ret_360',
               'AR_14_Ret_180': 'data/DUCT/AR_14_Ret_180',
-              'PHLL10595': 'data/PH_Breuer',
-              'CBFS13700': 'data/CBFS'}
+              'NASA_2DWMH': 'data/NASA_2DWMH',
+              }
 
 
 def parse_vector_field_manual(filepath, skip_header=0):
@@ -62,12 +62,9 @@ def extract_case(case_name, case_path):
     if case_name.startswith('AR_'):
         coords = parse_internal_field(f"{case_path}/constant/C")
         U_LES = parse_vector_field_manual(f"{case_path}/0/U_LES", skip_header=0)
-    elif case_name == 'PHLL10595':
+    elif case_name == 'NASA_2DWMH':
         coords = parse_internal_field(f"{case_path}/0/C")
         U_LES = parse_vector_field_manual(f"{case_path}/0/U_LES", skip_header=17)
-    elif case_name == 'CBFS13700':
-        coords = parse_internal_field(f"{case_path}/0/C")
-        U_LES = parse_vector_field_manual(f"{case_path}/0/interpolatedFields/U_internalField", skip_header=0)
     else:
         coords = parse_internal_field(f"{case_path}/0/C")
         U_LES = parse_internal_field(f"{case_path}/0/U_LES")

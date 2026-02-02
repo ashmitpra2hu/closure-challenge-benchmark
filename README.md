@@ -11,6 +11,7 @@ This is an **ongoing** challenge. It is not associated with any particular confe
 ## Current status
 - We've provided all the data here: some training/validation data, and the test cases. 
 - A python package (`closure-challenge`) is available, which provides the scoring code. See the package details and usage here: [https://github.com/rmcconke/closure-challenge](https://github.com/rmcconke/closure-challenge). 
+- **Note: as of 2 Feb 2026, the test cases have changed. Please see the updated table below.**
 
 If you have questions or suggestions as this challenge is developed, please open an issue in this repo. This is a community effort!
 
@@ -60,9 +61,9 @@ A checkmark in the below table indicates cases where only a single parametric va
 |- | - | - |  - |
 |**PHLL29** | (21 remaining cases)|`alpha_05_10071_4048`, `alpha_05_10071_2024`, `alpha_15_7929_4048`, `alpha_15_7929_2024`| `alpha_15_13929_4048`, `alpha_15_13929_2024`, `alpha_05_4071_4048`, `alpha_05_4071_2024`|
 |**DUCT** | `AR_1_Ret_180`, `AR_3_Ret_180`,`AR_5_Ret_180`, `AR_10_Ret_180` | `AR_7_Ret_180`  |`AR_1_Ret_360`,`AR_3_Ret_360`,`AR_14_Ret_180`|
-|**CBFS13700** | | | ✓|
-|**NASAHUMP**| ✓ | | |
-|**PHLL10595**|  | | ✓|
+|**CBFS13700** |✓ | | |
+|**NASAHUMP**|  | |✓ |
+|**PHLL10595**| ✓ | | |
 
 The below figure clarifies the validation/test split chosen for the periodic hills dataset.
 ![Alt text](phll_tvt_split.png)

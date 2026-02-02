@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data
-data = np.load('ground_truth_eval.npz')
+data = np.load('scripts/plots_data/ground_truth_test.npz')
 
 # Get all unique case names
 case_names = sorted(set([key.split('/')[0] for key in data.files]))
@@ -29,6 +29,14 @@ for idx, case_name in enumerate(case_names):
         y = coords[:, 2]  # z
         xlabel = 'y [m]'
         ylabel = 'z [m]'
+
+    elif case_name == 'NASA_2DWMH':
+        # For NASA_2DWMH case, plot x-y plane
+        x = coords[:, 0]
+        y = coords[:, 2]
+        xlabel = 'x [m]'
+        ylabel = 'z [m]'
+        
     else:
         # For other cases, plot x-y plane
         x = coords[:, 0]
