@@ -87,11 +87,9 @@ You must submit your predictions on the test dataset in **CSV format**.
 
 1. Save your interpolated predictions in CSV format under the respective directories in the `test` subdirectory of the benchmark dataset. You can easily get the evaluation points using the [python package](https://github.com/rmcconke/closure-challenge) for the challenge. These points are also provided for convenience under `data/evaluation_points`.
 2. You can preview what your score will be using the benchmark dataset's [python package](https://github.com/rmcconke/closure-challenge).
-3. Upload your `test` subdirectory to [figshare](https://figshare.com/).
-4. Create a pull request for this git repo 
-5. The benchmark steward (currently, Ryley McConkey) will evaluate your predictions, and update the leaderboard accordingly.
+3. Send your `test` subdirectory to Ryley McConkey: rmcconke@mit.edu .
+4. The benchmark steward (currently, Ryley McConkey) will evaluate your predictions, and update the leaderboard accordingly.
 
-A YouTube video showing the submission process is currently being prepared. It will be ready in time for the first submission deadline (expected January 2025).
 
 
 
