@@ -1,0 +1,6 @@
+//Case definition file
+h           0.001; //Channel half height
+AR          14.4; //Aspect ratio
+Re_b        2665.; //Reynolds number based on bulk velocity
+Re_tau      166.; //Friction Reynolds number
+nu          1.5e-5; //Kinematic viscosity
