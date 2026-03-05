@@ -6,7 +6,7 @@ import os
 competitors = {}
 
 # Montoya
-competitors['Montoya, Oulghelou, and Cinella'] = {
+competitors['Montoya, Oulghelou, and Cinnella'] = {
     'total': score_from_csv(os.path.join('submissions', 'montoya')),
     'cases': evaluate_from_csv_by_case(os.path.join('submissions', 'montoya')),
     'link': 'https://doi.org/10.1007/s10494-025-00661-8'
@@ -23,7 +23,7 @@ reissmann_paths = {
     "AR_14_Ret_180": "submissions/reissmann/AR_14_Ret_180/predictions.csv",
     "NASA_2DWMH": "submissions/reissmann/NASA_2DWMH/predictions.csv"
 }
-competitors['Reissmann and Fang'] = {
+competitors['Reissmann, Fang, and Sandberg'] = {
     'total': score_from_csv(reissmann_paths),
     'cases': evaluate_from_csv_by_case(reissmann_paths),
     'link': 'https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/reissmann/score_eval.ipynb'
@@ -33,7 +33,7 @@ competitors['Reissmann and Fang'] = {
 competitors['Wu and Zhang'] = {
     'total': score_from_csv(os.path.join('submissions', 'wu')),
     'cases': evaluate_from_csv_by_case(os.path.join('submissions', 'wu')),
-    'link': ''
+    'link': 'https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/wu/description_document.pdf'
 }
 
 # Sort by total score ascending (lower is better)

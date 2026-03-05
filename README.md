@@ -1,17 +1,15 @@
 # Benchmark challenge for machine learning in RANS turbulence modelling
 
 # Current leaderboard
-|   Rank | Name                                                                                                                           |   Overall score |   alpha_15_13929_4048 |   alpha_15_13929_2024 |   alpha_05_4071_4048 |   alpha_05_4071_2024 |   AR_1_Ret_360 |   AR_3_Ret_360 |   AR_14_Ret_180 |   NASA_2DWMH |
-|--------|--------------------------------------------------------------------------------------------------------------------------------|-----------|-----------------------|-----------------------|----------------------|----------------------|----------------|----------------|-----------------|--------------|
-|      1 | [Reissmann and Fang](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/reissmann/score_eval.ipynb) |    0.5123 |                0.062  |                0.1385 |               0.0681 |               0.0844 |         0.043  |         0.0383 |          0.035  |       0.0432 |
-|      2 | [Wu and Zhang](https://doi.org/10.2514/1.J064416)                                                                                                               |    0.5354 |                0.0846 |                0.1239 |               0.0632 |               0.0944 |         0.0494 |         0.0439 |          0.0376 |       0.0384 |
-|      3 | [Montoya, Oulghelou, and Cinnella](https://doi.org/10.1007/s10494-025-00661-8)                                                  |    0.6723 |                0.0703 |                0.1411 |               0.068  |               0.0979 |         0.0991 |         0.0952 |          0.0524 |       0.0484 |
+|   Rank | Authors                                                                                                                                   |   Overall |   alpha_15_13929_4048 |   alpha_15_13929_2024 |   alpha_05_4071_4048 |   alpha_05_4071_2024 |   AR_1_Ret_360 |   AR_3_Ret_360 |   AR_14_Ret_180 |   NASA_2DWMH |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------------------|-----------------------|----------------------|----------------------|----------------|----------------|-----------------|--------------|
+|      1 | [Reissmann, Fang, and Sandberg](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/reissmann/score_eval.ipynb) |    0.5123 |                0.062  |                0.1385 |               0.0681 |               0.0844 |         0.043  |         0.0383 |          0.035  |       0.0432 |
+|      2 | [Wu and Zhang](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/wu/description_document.pdf)                 |    0.5354 |                0.0846 |                0.1239 |               0.0632 |               0.0944 |         0.0494 |         0.0439 |          0.0376 |       0.0384 |
+|      3 | [Montoya, Oulghelou, and Cinnella](https://doi.org/10.1007/s10494-025-00661-8)                                                            |    0.6723 |                0.0703 |                0.1411 |               0.068  |               0.0979 |         0.0991 |         0.0952 |          0.0524 |       0.0484 |
 
 Notes:
 - Score is a scaled MAE (lower is better). See the evaluation package [source code](https://github.com/rmcconke/closure-challenge/blob/main/src/closure_challenge/eval.py) for more details.
 - Submissions are accepted anytime! See below for submission instructions.
-- We are currently waiting on more details (complete author lists, and relevant links) from the first round of submitters.
-
 
 # Motivation
 The field of ML augmented RANS modelling has seen significant interest for at least a decade. Many methodologies have been proposed. However, a critical problem slowing progress in the field is the absence of an open-source benchmark dataset with clear evaluation criteria. In order to compare a new technique against an existing technique, significant effort is required. We aim to eliminate this required effort and greatly accelerate progress in the field by implementing a benchmark dataset for ML in RANS.
