@@ -1,5 +1,19 @@
-# Benchmark dataset for machine learning in RANS turbulence modelling
+# Benchmark challenge for machine learning in RANS turbulence modelling
 
+# Current leaderboard
+|   Rank | Name                                                                                                                           |   Overall score |   alpha_15_13929_4048 |   alpha_15_13929_2024 |   alpha_05_4071_4048 |   alpha_05_4071_2024 |   AR_1_Ret_360 |   AR_3_Ret_360 |   AR_14_Ret_180 |   NASA_2DWMH |
+|--------|--------------------------------------------------------------------------------------------------------------------------------|-----------|-----------------------|-----------------------|----------------------|----------------------|----------------|----------------|-----------------|--------------|
+|      1 | [Reissmann and Fang](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/reissmann/score_eval.ipynb) |    0.5123 |                0.062  |                0.1385 |               0.0681 |               0.0844 |         0.043  |         0.0383 |          0.035  |       0.0432 |
+|      2 | [Wu and Zhang]()                                                                                                               |    0.5354 |                0.0846 |                0.1239 |               0.0632 |               0.0944 |         0.0494 |         0.0439 |          0.0376 |       0.0384 |
+|      3 | [Montoya, Oulghelou, and Cinella](https://doi.org/10.1007/s10494-025-00661-8)                                                  |    0.6723 |                0.0703 |                0.1411 |               0.068  |               0.0979 |         0.0991 |         0.0952 |          0.0524 |       0.0484 |
+
+Notes:
+- Score is a scaled MAE (lower is better). See the evaluation package [source code](https://github.com/rmcconke/closure-challenge/blob/main/src/closure_challenge/eval.py) for more details.
+- Submissions are accepted anytime! See below for submission instructions.
+- We are currently waiting on more details (complete author lists, and relevant links) from the first round of submitters.
+
+
+# Motivation
 The field of ML augmented RANS modelling has seen significant interest for at least a decade. Many methodologies have been proposed. However, a critical problem slowing progress in the field is the absence of an open-source benchmark dataset with clear evaluation criteria. In order to compare a new technique against an existing technique, significant effort is required. We aim to eliminate this required effort and greatly accelerate progress in the field by implementing a benchmark dataset for ML in RANS.
 
 Our goal is to create a challenging dataset that represents the actual state of ML-augmented RANS turbulence modelling. We aim to propose challenging generalization tasks, with the goal that over time, techniques which generalize better will rise to the top of the leaderboard. We do not want to cast the field in an overly optimistic light; we want to provide a hard challenge that will motivate new ideas in the field.
@@ -7,11 +21,6 @@ Our goal is to create a challenging dataset that represents the actual state of 
 The benchmark task is to **predict the flow field** for a series of test cases given a specified training and validation dataset, as well as a given CFD mesh. All other decisions are left to the submitter.
 
 This is an **ongoing** challenge. It is not associated with any particular conference or event. This running leaderboard aims to summarize the state of the art in the field of ML for RANS turbulence modelling.
-
-## Current status
-- We've provided all the data here: some training/validation data, and the test cases. 
-- A python package (`closure-challenge`) is available, which provides the scoring code. See the package details and usage here: [https://github.com/rmcconke/closure-challenge](https://github.com/rmcconke/closure-challenge). 
-- **Note: as of 2 Feb 2026, the test cases have changed. Please see the updated table below.**
 
 If you have questions or suggestions as this challenge is developed, please open an issue in this repo. This is a community effort!
 
@@ -77,8 +86,6 @@ The benchmark scores are based on your model's performance on the test datasets.
 The train/val/test split in the challenge tests the following:
 - Reynolds number generalization
 - Geometry generalization
-- Covariance (model predictions rotate with the entire coordinate frame)
-- Galilean invariance (model predictions do not change with a Galilean boost of the input features)
 
 # Submission instructions
 The submission procedure is currently a work in progress. However, the scoring code is available here: [closure-challenge](https://github.com/rmcconke/closure-challenge).
@@ -87,7 +94,7 @@ You must submit your predictions on the test dataset in **CSV format**.
 
 1. Save your interpolated predictions in CSV format under the respective directories in the `test` subdirectory of the benchmark dataset. You can easily get the evaluation points using the [python package](https://github.com/rmcconke/closure-challenge) for the challenge. These points are also provided for convenience under `data/evaluation_points`.
 2. You can preview what your score will be using the benchmark dataset's [python package](https://github.com/rmcconke/closure-challenge).
-3. Send your `test` subdirectory to Ryley McConkey: rmcconke@mit.edu .
+3. Send your `test` subdirectory to Ryley McConkey: rmcconke@mit.edu . Also include a list of all authors, and any relevant references (e.g., papers, github repos, etc.)
 4. The benchmark steward (currently, Ryley McConkey) will evaluate your predictions, and update the leaderboard accordingly.
 
 

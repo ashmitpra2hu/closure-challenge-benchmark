@@ -7,6 +7,10 @@ __pycache__/
 py_env/
 # C extensions
 *.so
+.vscode/
+
+.python-version
+
 
 # Distribution / packaging
 .Python
