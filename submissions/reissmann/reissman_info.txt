@@ -1,0 +1,14 @@
+According to the information, we are currently drafting up the approach utilized to fit the anisotropic stress model concurrently with the k-omega coefficients. The core novelty then can be pointed to a newly designed cost-function.
+
+So far far the methods include:
+
+GEP-approach: https://www.sciencedirect.com/science/article/abs/pii/S0021999116303643
+GEP-Implementation: https://link.springer.com/article/10.1007/s10710-025-09510-z
+Github-Repo: https://github.com/maxreiss123/GeneExpressionProgramming.jl
+
+Differential Evolution: Storn R, Price KV (1995). Differential evolution — a simple and efficient adaptive scheme for global optimization over continuous spaces. Technical Report TR-95–012, ICSI, March 1995. Available via ftp://ftp.icsi.berkeley.edu/pub/techreports/1995/tr95-012.ps.Z.
+Implementation: Scipy
+
+
+Best wishes
+Max
