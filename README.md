@@ -37,6 +37,27 @@ Original data link: [https://turbmodels.larc.nasa.gov/Other_LES_Data/curvedstep.
 ## NASA Wall-mounted hump  
 Original data link: [https://turbmodels.larc.nasa.gov/nasahump_val.html](https://turbmodels.larc.nasa.gov/nasahump_val.html)
 
+
+## NASA hump no-cheat generation workflow
+To run a strict "no-cheat" NASA hump experiment (hide NASA data, train from other cases, predict NASA points, then restore NASA and evaluate):
+
+```bash
+.venv/bin/python scripts/generate_nasa_hump_no_cheat.py
+```
+
+This script:
+- Temporarily removes `data/NASA_2DWMH` from the training set by moving it to a hidden folder.
+- Uses only the remaining benchmark cases (with `0/C` and `0/U_LES`) to fit a simple kNN + inverse-distance surrogate.
+- Predicts velocity for `data/evaluation_points/NASA_2DWMH_points.csv`.
+- Restores the original NASA case folder after prediction.
+- Computes a post-restore efficiency report against NASA truth and writes:
+  - `submissions/codex_no_cheat/NASA_2DWMH.csv`
+  - `submissions/codex_no_cheat/NASA_2DWMH_efficiency_report.json`
+
+Reference sources for hump-case context:
+- [NASA/TMBWG validation page](https://tmbwg.github.io/turbmodels/nasahump_val.html)
+- [TMBWG models site](https://tmbwg.github.io/turbmodels/)
+
 ## 3D Cases
 All 3D case baseline meshes and RANS solutions can be accessed here:  
 **[https://surfdrive.surf.nl/s/G5ND38JxRXbWBJQ](https://surfdrive.surf.nl/s/G5ND38JxRXbWBJQ)**
