@@ -39,23 +39,15 @@ Original data link: [https://turbmodels.larc.nasa.gov/nasahump_val.html](https:/
 
 
 ## NASA hump no-cheat generation workflow
-To run a stricter and more accurate no-cheat NASA hump experiment (hide NASA data, train from other cases, predict NASA points, then restore NASA and evaluate), run these terminal commands from repo root:
+To run a strict "no-cheat" NASA hump experiment (hide NASA data, train from other cases, predict NASA points, then restore NASA and evaluate):
 
 ```bash
-cd /path/to/closure-challenge-benchmark
 .venv/bin/python scripts/generate_nasa_hump_no_cheat.py
-cat submissions/codex_no_cheat/NASA_2DWMH_efficiency_report.json
-```
-
-Accuracy-focused command (same script, explicit options):
-
-```bash
-.venv/bin/python scripts/generate_nasa_hump_no_cheat.py   --include-patterns Parm_PH_29 PH_Breuer   --k 4   --distance-power 1.0   --samples-per-case 2500   --chunk-size 128   --seed 7
 ```
 
 This script:
 - Temporarily removes `data/NASA_2DWMH` from the training set by moving it to a hidden folder.
-- Uses non-NASA benchmark cases (filtered by `--include-patterns`) to fit a kNN + inverse-distance surrogate.
+- Uses only the remaining benchmark cases (with `0/C` and `0/U_LES`) to fit a simple kNN + inverse-distance surrogate.
 - Predicts velocity for `data/evaluation_points/NASA_2DWMH_points.csv`.
 - Restores the original NASA case folder after prediction.
 - Computes a post-restore efficiency report against NASA truth and writes:
